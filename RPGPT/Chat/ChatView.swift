@@ -49,6 +49,16 @@ struct ChatView: View {
                                 .padding(.horizontal, 16)
                                 .padding(.bottom, 10)
                             Spacer()
+                            Button {
+                                reloadMessage()
+                            } label: {
+                                Image(systemName: "exclamationmark.arrow.triangle.2.circlepath")
+                                    .font(.system(size: 26))
+                                    .foregroundColor(Color.red)
+                            }
+                            .font(.system(size: 26))
+                            Spacer()
+                            Spacer()
                         }
                     }
                     
@@ -86,6 +96,14 @@ struct ChatView: View {
                 viewModel.getGTPAnswer(message)
             }
 
+        }
+    }
+
+    func reloadMessage() {
+        withAnimation {
+            withAnimation {
+                viewModel.getGTPAnswer()
+            }
         }
     }
 }
