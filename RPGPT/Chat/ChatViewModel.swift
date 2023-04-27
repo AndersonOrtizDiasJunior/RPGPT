@@ -21,14 +21,13 @@ final class ChatViewModel: ObservableObject {
     }
 
     func setup() {
-        let keyHelper = APIKeyHelper()
-        self.openAI.setup(apiKey: keyHelper.getAPIKey())
+        self.openAI.setup(apiKey: AppConstants.apiKey)
         if messageList.count <= 1 {
-            self.getGTPAnswer("Hi")
+            self.getGTPAnswer()
         }
     }
 
-    func getGTPAnswer(_ message: String) {
+    func getGTPAnswer(_ message: String? = nil) {
         observer = self.openAI.getGPTAnswer(message: message)
             .receive(on: DispatchQueue.main)
             .sink { completion in

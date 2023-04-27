@@ -23,7 +23,6 @@
 		537B1D1329FAAC7100292D86 /* GPTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1229FAAC7100292D86 /* GPTError.swift */; };
 		537B1D1629FAB1F000292D86 /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1529FAB1F000292D86 /* LocalStorageKeys.swift */; };
 		537B1D1829FAB23C00292D86 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1729FAB23C00292D86 /* LocalStorage.swift */; };
-		53DC356C29FAD2C5001B30FE /* APIKeyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC356B29FAD2C5001B30FE /* APIKeyHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +61,6 @@
 		537B1D1229FAAC7100292D86 /* GPTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTError.swift; sourceTree = "<group>"; };
 		537B1D1529FAB1F000292D86 /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
 		537B1D1729FAB23C00292D86 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
-		53DC356B29FAD2C5001B30FE /* APIKeyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeyHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 				5316367829F9A66700AFE83F /* Assets.xcassets */,
 				5316367A29F9A66700AFE83F /* Preview Content */,
 				531636AE29F9AEAE00AFE83F /* AppConstants.swift */,
-				53DC356B29FAD2C5001B30FE /* APIKeyHelper.swift */,
 			);
 			path = RPGPT;
 			sourceTree = "<group>";
@@ -322,7 +319,6 @@
 				531636A129F9A70300AFE83F /* ChatView.swift in Sources */,
 				531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */,
 				537B1D1629FAB1F000292D86 /* LocalStorageKeys.swift in Sources */,
-				53DC356C29FAD2C5001B30FE /* APIKeyHelper.swift in Sources */,
 				531636A929F9A8D700AFE83F /* OpenAI.swift in Sources */,
 				5316367529F9A66600AFE83F /* RPGPTApp.swift in Sources */,
 				537B1D1329FAAC7100292D86 /* GPTError.swift in Sources */,
