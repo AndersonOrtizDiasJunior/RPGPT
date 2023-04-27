@@ -7,6 +7,8 @@ final class ChatViewModel: ObservableObject {
     private var localStorage: LocalStorage
     private var observer: AnyCancellable?
 
+    @Published var isGettingAnswer: Bool = false
+
     @Published var messageList: [ChatViewMessage] {
         didSet {
             localStorage.set(for: .messageList, value: messageList)
@@ -28,6 +30,7 @@ final class ChatViewModel: ObservableObject {
     }
 
     func getGTPAnswer(_ message: String? = nil) {
+        isGettingAnswer = true
         observer = self.openAI.getGPTAnswer(message: message)
             .receive(on: DispatchQueue.main)
             .sink { completion in
@@ -36,7 +39,9 @@ final class ChatViewModel: ObservableObject {
                     self.messageList.append(.init(type: .error, content: AppConstants.openAIErrorMessage))
                     print("Error getting GPT Answer:")
                     print(error)
+                    self.isGettingAnswer = false
                 case .finished:
+                    self.isGettingAnswer = false
                     print("Succesfully got GPT Answer")
                 }
             } receiveValue: { response in

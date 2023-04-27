@@ -18,6 +18,7 @@
 		531636A929F9A8D700AFE83F /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636A829F9A8D700AFE83F /* OpenAI.swift */; };
 		531636AB29F9AB0200AFE83F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636AA29F9AB0200AFE83F /* ChatViewModel.swift */; };
 		531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636AE29F9AEAE00AFE83F /* AppConstants.swift */; };
+		5353388029FAEB0100132B71 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5353387F29FAEB0100132B71 /* View+Extensions.swift */; };
 		537B1D0F29FA98F700292D86 /* ChatViewMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D0E29FA98F700292D86 /* ChatViewMessage.swift */; };
 		537B1D1129FA996D00292D86 /* ChatViewMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1029FA996D00292D86 /* ChatViewMessageType.swift */; };
 		537B1D1329FAAC7100292D86 /* GPTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1229FAAC7100292D86 /* GPTError.swift */; };
@@ -56,6 +57,7 @@
 		531636A829F9A8D700AFE83F /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
 		531636AA29F9AB0200AFE83F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 		531636AE29F9AEAE00AFE83F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		5353387F29FAEB0100132B71 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
 		537B1D0E29FA98F700292D86 /* ChatViewMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewMessage.swift; sourceTree = "<group>"; };
 		537B1D1029FA996D00292D86 /* ChatViewMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewMessageType.swift; sourceTree = "<group>"; };
 		537B1D1229FAAC7100292D86 /* GPTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTError.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				5316367829F9A66700AFE83F /* Assets.xcassets */,
 				5316367A29F9A66700AFE83F /* Preview Content */,
 				531636AE29F9AEAE00AFE83F /* AppConstants.swift */,
+				5353387F29FAEB0100132B71 /* View+Extensions.swift */,
 			);
 			path = RPGPT;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				537B1D0F29FA98F700292D86 /* ChatViewMessage.swift in Sources */,
 				537B1D1829FAB23C00292D86 /* LocalStorage.swift in Sources */,
+				5353388029FAEB0100132B71 /* View+Extensions.swift in Sources */,
 				537B1D1129FA996D00292D86 /* ChatViewMessageType.swift in Sources */,
 				531636A129F9A70300AFE83F /* ChatView.swift in Sources */,
 				531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */,
