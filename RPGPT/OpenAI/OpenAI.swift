@@ -24,7 +24,7 @@ final class OpenAI {
                 switch result {
                 case .success(let result):
                     guard let answer = result.choices?.first?.message.content else {
-                        promise(.failure(OpenAIError.answerError))
+                        promise(.failure(GPTError.messageError.self))
                         return
                     }
                     self?.chatHistory.append(.init(role: .assistant, content: answer))
