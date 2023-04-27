@@ -10,7 +10,7 @@ import Combine
 final class ChatViewModel: ObservableObject {
     let openAI: OpenAI
     @Published var messages: [String] = []
-    @Published var messageList: [String] = ["[USER]Let's play RPG?"]
+    @Published var messageList: [ChatViewMessage] = [.init(type: .user, content: "Let's play RPG?")]
 
     private var observer: AnyCancellable?
 
@@ -31,13 +31,12 @@ final class ChatViewModel: ObservableObject {
         observer = self.openAI.getGPTAnswer(message: message).sink { completion in
             switch completion {
             case .failure(let error):
-                print("gpt gone wrong")
-                self.messageList.append(AppConstants.openAIErrorMessage)
+                self.messageList.append(.init(type: .error, content: AppConstants.openAIErrorMessage))
             case .finished:
                 print("Succesfully got GPT Answer")
             }
         } receiveValue: { response in
-            self.messageList.append(response)
+            self.messageList.append(.init(type: .GPT, content: response))
         }
     }
 }

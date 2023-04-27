@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 
 struct ChatView: View {
@@ -23,35 +21,40 @@ struct ChatView: View {
             }
             
             ScrollView {
-             ForEach(viewModel.messageList, id: \.self) { message in
-                    // If the message contains [USER], that means it's us
-                    if message.contains("[USER]") {
-                        let newMessage = message.replacingOccurrences(of: "[USER]", with: "")
-                        
-                        // User message styles
-                        HStack {
-                            Spacer()
-                            Text(newMessage)
-                                .padding()
-                                .foregroundColor(Color.white)
-                                .background(Color.blue.opacity(0.8))
-                                .cornerRadius(10)
-                                .padding(.horizontal, 16)
-                                .padding(.bottom, 10)
-                        }
-                    } else {
-                        
-                        // Bot message styles
-                        HStack {
-                            Text(message)
-                                .padding()
-                                .background(Color.gray.opacity(0.15))
-                                .cornerRadius(10)
-                                .padding(.horizontal, 16)
-                                .padding(.bottom, 10)
-                            Spacer()
-                        }
-                    }
+             ForEach(viewModel.messageList) { message in
+                 switch message.type {
+                     case .user:
+                         HStack {
+                             Spacer()
+                             Text(message.content)
+                                 .padding()
+                                 .foregroundColor(Color.white)
+                                 .background(Color.blue.opacity(0.8))
+                                 .cornerRadius(10)
+                                 .padding(.horizontal, 16)
+                                 .padding(.bottom, 10)
+                         }
+                     case .GPT:
+                         HStack {
+                             Text(message.content)
+                                 .padding()
+                                 .background(Color.gray.opacity(0.15))
+                                 .cornerRadius(10)
+                                 .padding(.horizontal, 16)
+                                 .padding(.bottom, 10)
+                             Spacer()
+                         }
+                 case .error:
+                     HStack {
+                         Text(message.content)
+                             .padding()
+                             .background(Color.red.opacity(0.15))
+                             .cornerRadius(10)
+                             .padding(.horizontal, 16)
+                             .padding(.bottom, 10)
+                         Spacer()
+                     }
+                 }
                     
                 }.rotationEffect(.degrees(180))
             }
@@ -83,7 +86,7 @@ struct ChatView: View {
     
     func sendMessage(message: String) {
         withAnimation {
-            messages.append("[USER]" + message)
+            viewModel.messageList.append(ChatViewMessage(type: .user, content: message))
             self.messageText = ""
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
