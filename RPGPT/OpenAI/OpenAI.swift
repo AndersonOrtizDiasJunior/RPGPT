@@ -1,10 +1,3 @@
-//
-//  OpenAIModel.swift
-//  RPGPT
-//
-//  Created by Anderson Ortiz Dias Junior on 26/04/23.
-//
-
 import SwiftUI
 import OpenAISwift
 import Combine
@@ -36,8 +29,8 @@ final class OpenAI {
                     }
                     self?.chatHistory.append(.init(role: .assistant, content: answer))
                     promise(.success(answer))
-                case .failure(_):
-                    promise(.failure(OpenAIError.answerError))
+                case .failure(let error):
+                    promise(.failure(error))
                 }
             })
         }

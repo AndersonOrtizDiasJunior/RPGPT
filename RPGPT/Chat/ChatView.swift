@@ -2,9 +2,7 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject private var viewModel: ChatViewModel = ChatViewModel()
-
     @State private var messageText = ""
-    @State var messages: [String] = ["Welcome to Chat Bot 2.0!"]
     
     var body: some View {
         VStack {
@@ -16,53 +14,49 @@ struct ChatView: View {
                 Image(systemName: "bubble.left.fill")
                     .font(.system(size: 26))
                     .foregroundColor(Color.blue)
-            }.onAppear() {
-
             }
             
             ScrollView {
-             ForEach(viewModel.messageList) { message in
-                 switch message.type {
-                     case .user:
-                         HStack {
-                             Spacer()
-                             Text(message.content)
-                                 .padding()
-                                 .foregroundColor(Color.white)
-                                 .background(Color.blue.opacity(0.8))
-                                 .cornerRadius(10)
-                                 .padding(.horizontal, 16)
-                                 .padding(.bottom, 10)
-                         }
-                     case .GPT:
-                         HStack {
-                             Text(message.content)
-                                 .padding()
-                                 .background(Color.gray.opacity(0.15))
-                                 .cornerRadius(10)
-                                 .padding(.horizontal, 16)
-                                 .padding(.bottom, 10)
-                             Spacer()
-                         }
-                 case .error:
-                     HStack {
-                         Text(message.content)
-                             .padding()
-                             .background(Color.red.opacity(0.15))
-                             .cornerRadius(10)
-                             .padding(.horizontal, 16)
-                             .padding(.bottom, 10)
-                         Spacer()
-                     }
-                 }
+                ForEach(viewModel.messageList) { message in
+                    switch message.type {
+                    case .user:
+                        HStack {
+                            Spacer()
+                            Text(message.content)
+                                .padding()
+                                .foregroundColor(Color.white)
+                                .background(Color.blue.opacity(0.8))
+                                .cornerRadius(10)
+                                .padding(.horizontal, 16)
+                                .padding(.bottom, 10)
+                        }
+                    case .GPT:
+                        HStack {
+                            Text(message.content)
+                                .padding()
+                                .background(Color.gray.opacity(0.15))
+                                .cornerRadius(10)
+                                .padding(.horizontal, 16)
+                                .padding(.bottom, 10)
+                            Spacer()
+                        }
+                    case .error:
+                        HStack {
+                            Text(message.content)
+                                .padding()
+                                .background(Color.red.opacity(0.15))
+                                .cornerRadius(10)
+                                .padding(.horizontal, 16)
+                                .padding(.bottom, 10)
+                            Spacer()
+                        }
+                    }
                     
                 }.rotationEffect(.degrees(180))
             }
             .rotationEffect(.degrees(180))
             .background(Color.gray.opacity(0.1))
-            
-            
-            // Contains the Message bar
+
             HStack {
                 TextField("Type something", text: $messageText)
                     .padding()
