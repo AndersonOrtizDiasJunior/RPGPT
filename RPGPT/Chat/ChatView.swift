@@ -91,7 +91,7 @@ struct ChatView: View {
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 withAnimation {
-                    messages.append(getBotResponse(message: message))
+                    viewModel.getGTPAnswer(message)
                 }
             }
         }

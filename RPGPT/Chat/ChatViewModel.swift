@@ -27,7 +27,7 @@ final class ChatViewModel: ObservableObject {
         return self.getGTPAnswer("Hi")
     }
 
-    private func getGTPAnswer(_ message: String) {
+    func getGTPAnswer(_ message: String) {
         observer = self.openAI.getGPTAnswer(message: message).sink { completion in
             switch completion {
             case .failure(let error):
