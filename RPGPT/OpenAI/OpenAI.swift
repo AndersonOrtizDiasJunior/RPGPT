@@ -4,8 +4,14 @@ import Combine
 
 final class OpenAI {
 
+    private var localStorage: LocalStorage
     private var client: OpenAISwift?
-    private var chatHistory: [ChatMessage] = AppConstants.initialChat
+    private var chatHistory: [ChatMessage]
+
+    init(localStorage: LocalStorage = LocalStorage()) {
+        self.localStorage = localStorage
+        self.chatHistory = localStorage.get(from: .chatHistory, type: [ChatMessage].self) ?? AppConstants.initialChat
+    }
 
     func setup(apiKey: String) {
         client = OpenAISwift(authToken: apiKey)
@@ -13,7 +19,7 @@ final class OpenAI {
 
     func getGPTAnswer(message: String?) -> Future<String, Error> {
         if let message = message {
-            chatHistory.append(.init(role: .user, content: message))
+            saveMessage(message: .init(role: .user, content: message))
         }
         return Future {[weak self] promise in
 
@@ -24,12 +30,17 @@ final class OpenAI {
                         promise(.failure(GPTError.messageError.self))
                         return
                     }
-                    self?.chatHistory.append(.init(role: .assistant, content: answer))
+                    self?.saveMessage(message: .init(role: .assistant, content: answer))
                     promise(.success(answer))
                 case .failure(let error):
                     promise(.failure(error))
                 }
             })
         }
+    }
+
+    private func saveMessage (message: ChatMessage) {
+        self.chatHistory.append(message)
+        return self.localStorage.set(for: .chatHistory, value: self.chatHistory)
     }
 }

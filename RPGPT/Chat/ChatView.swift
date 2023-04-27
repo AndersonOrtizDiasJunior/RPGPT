@@ -82,12 +82,10 @@ struct ChatView: View {
         withAnimation {
             viewModel.messageList.append(ChatViewMessage(type: .user, content: message))
             self.messageText = ""
-            
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                withAnimation {
-                    viewModel.getGTPAnswer(message)
-                }
+            withAnimation {
+                viewModel.getGTPAnswer(message)
             }
+
         }
     }
 }

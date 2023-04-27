@@ -1,21 +1,31 @@
 import SwiftUI
 import Combine
+import OpenAISwift
 
 final class ChatViewModel: ObservableObject {
     let openAI: OpenAI
-    @Published var messages: [String] = []
-    @Published var messageList: [ChatViewMessage] = [.init(type: .user, content: "Let's play RPG?")]
-
+    private var localStorage: LocalStorage
     private var observer: AnyCancellable?
 
-    init (openAI: OpenAI = OpenAI()) {
+    @Published var messageList: [ChatViewMessage] {
+        didSet {
+            localStorage.set(for: .messageList, value: messageList)
+        }
+    }
+
+    init (openAI: OpenAI = OpenAI(), localStorage: LocalStorage = LocalStorage()) {
         self.openAI = openAI
+        self.localStorage = localStorage
+        self.messageList = localStorage.get(from: .messageList, type: [ChatViewMessage].self) ?? AppConstants.initialMessageList
         self.setup()
     }
 
     func setup() {
-        self.openAI.setup(apiKey: AppConstants.apiKey)
-        return self.getGTPAnswer("Hi")
+        let keyHelper = APIKeyHelper()
+        self.openAI.setup(apiKey: keyHelper.getAPIKey())
+        if messageList.count <= 1 {
+            self.getGTPAnswer("Hi")
+        }
     }
 
     func getGTPAnswer(_ message: String) {
