@@ -1,0 +1,659 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5316367529F9A66600AFE83F /* RPGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316367429F9A66600AFE83F /* RPGPTApp.swift */; };
+		5316367929F9A66700AFE83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5316367829F9A66700AFE83F /* Assets.xcassets */; };
+		5316367C29F9A66700AFE83F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5316367B29F9A66700AFE83F /* Preview Assets.xcassets */; };
+		5316368629F9A66800AFE83F /* RPGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316368529F9A66800AFE83F /* RPGPTTests.swift */; };
+		5316369029F9A66800AFE83F /* RPGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316368F29F9A66800AFE83F /* RPGPTUITests.swift */; };
+		5316369229F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316369129F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift */; };
+		531636A029F9A70300AFE83F /* BotResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316369E29F9A70300AFE83F /* BotResponse.swift */; };
+		531636A129F9A70300AFE83F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316369F29F9A70300AFE83F /* ChatView.swift */; };
+		531636A429F9A87100AFE83F /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 531636A329F9A87100AFE83F /* OpenAISwift */; };
+		531636A929F9A8D700AFE83F /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636A829F9A8D700AFE83F /* OpenAI.swift */; };
+		531636AB29F9AB0200AFE83F /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636AA29F9AB0200AFE83F /* ChatViewModel.swift */; };
+		531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636AE29F9AEAE00AFE83F /* AppConstants.swift */; };
+		531636B129F9B44300AFE83F /* OpenAIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636B029F9B44300AFE83F /* OpenAIError.swift */; };
+		537B1D0F29FA98F700292D86 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D0E29FA98F700292D86 /* ChatMessage.swift */; };
+		537B1D1129FA996D00292D86 /* ChatMessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1029FA996D00292D86 /* ChatMessageType.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5316368229F9A66800AFE83F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5316366929F9A66600AFE83F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5316367029F9A66600AFE83F;
+			remoteInfo = RPGPT;
+		};
+		5316368C29F9A66800AFE83F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5316366929F9A66600AFE83F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5316367029F9A66600AFE83F;
+			remoteInfo = RPGPT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5316367129F9A66600AFE83F /* RPGPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPGPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5316367429F9A66600AFE83F /* RPGPTApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTApp.swift; sourceTree = "<group>"; };
+		5316367829F9A66700AFE83F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5316367B29F9A66700AFE83F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5316368129F9A66700AFE83F /* RPGPTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPGPTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5316368529F9A66800AFE83F /* RPGPTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTTests.swift; sourceTree = "<group>"; };
+		5316368B29F9A66800AFE83F /* RPGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5316368F29F9A66800AFE83F /* RPGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTUITests.swift; sourceTree = "<group>"; };
+		5316369129F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5316369E29F9A70300AFE83F /* BotResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotResponse.swift; sourceTree = "<group>"; };
+		5316369F29F9A70300AFE83F /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		531636A829F9A8D700AFE83F /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
+		531636AA29F9AB0200AFE83F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		531636AE29F9AEAE00AFE83F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		531636B029F9B44300AFE83F /* OpenAIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIError.swift; sourceTree = "<group>"; };
+		537B1D0E29FA98F700292D86 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		537B1D1029FA996D00292D86 /* ChatMessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageType.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5316366E29F9A66600AFE83F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531636A429F9A87100AFE83F /* OpenAISwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5316367E29F9A66700AFE83F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5316368829F9A66800AFE83F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5316366829F9A66600AFE83F = {
+			isa = PBXGroup;
+			children = (
+				5316367329F9A66600AFE83F /* RPGPT */,
+				5316368429F9A66800AFE83F /* RPGPTTests */,
+				5316368E29F9A66800AFE83F /* RPGPTUITests */,
+				5316367229F9A66600AFE83F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5316367229F9A66600AFE83F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5316367129F9A66600AFE83F /* RPGPT.app */,
+				5316368129F9A66700AFE83F /* RPGPTTests.xctest */,
+				5316368B29F9A66800AFE83F /* RPGPTUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5316367329F9A66600AFE83F /* RPGPT */ = {
+			isa = PBXGroup;
+			children = (
+				531636A629F9A87D00AFE83F /* Chat */,
+				531636A529F9A87600AFE83F /* OpenAI */,
+				5316369E29F9A70300AFE83F /* BotResponse.swift */,
+				5316367429F9A66600AFE83F /* RPGPTApp.swift */,
+				5316367829F9A66700AFE83F /* Assets.xcassets */,
+				5316367A29F9A66700AFE83F /* Preview Content */,
+				531636AE29F9AEAE00AFE83F /* AppConstants.swift */,
+			);
+			path = RPGPT;
+			sourceTree = "<group>";
+		};
+		5316367A29F9A66700AFE83F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				5316367B29F9A66700AFE83F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5316368429F9A66800AFE83F /* RPGPTTests */ = {
+			isa = PBXGroup;
+			children = (
+				5316368529F9A66800AFE83F /* RPGPTTests.swift */,
+			);
+			path = RPGPTTests;
+			sourceTree = "<group>";
+		};
+		5316368E29F9A66800AFE83F /* RPGPTUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5316368F29F9A66800AFE83F /* RPGPTUITests.swift */,
+				5316369129F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift */,
+			);
+			path = RPGPTUITests;
+			sourceTree = "<group>";
+		};
+		531636A529F9A87600AFE83F /* OpenAI */ = {
+			isa = PBXGroup;
+			children = (
+				531636A829F9A8D700AFE83F /* OpenAI.swift */,
+				531636B029F9B44300AFE83F /* OpenAIError.swift */,
+			);
+			path = OpenAI;
+			sourceTree = "<group>";
+		};
+		531636A629F9A87D00AFE83F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				537B1D0E29FA98F700292D86 /* ChatMessage.swift */,
+				537B1D1029FA996D00292D86 /* ChatMessageType.swift */,
+				5316369F29F9A70300AFE83F /* ChatView.swift */,
+				531636AA29F9AB0200AFE83F /* ChatViewModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5316367029F9A66600AFE83F /* RPGPT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5316369529F9A66800AFE83F /* Build configuration list for PBXNativeTarget "RPGPT" */;
+			buildPhases = (
+				5316366D29F9A66600AFE83F /* Sources */,
+				5316366E29F9A66600AFE83F /* Frameworks */,
+				5316366F29F9A66600AFE83F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RPGPT;
+			packageProductDependencies = (
+				531636A329F9A87100AFE83F /* OpenAISwift */,
+			);
+			productName = RPGPT;
+			productReference = 5316367129F9A66600AFE83F /* RPGPT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5316368029F9A66700AFE83F /* RPGPTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5316369829F9A66800AFE83F /* Build configuration list for PBXNativeTarget "RPGPTTests" */;
+			buildPhases = (
+				5316367D29F9A66700AFE83F /* Sources */,
+				5316367E29F9A66700AFE83F /* Frameworks */,
+				5316367F29F9A66700AFE83F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5316368329F9A66800AFE83F /* PBXTargetDependency */,
+			);
+			name = RPGPTTests;
+			productName = RPGPTTests;
+			productReference = 5316368129F9A66700AFE83F /* RPGPTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5316368A29F9A66800AFE83F /* RPGPTUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5316369B29F9A66800AFE83F /* Build configuration list for PBXNativeTarget "RPGPTUITests" */;
+			buildPhases = (
+				5316368729F9A66800AFE83F /* Sources */,
+				5316368829F9A66800AFE83F /* Frameworks */,
+				5316368929F9A66800AFE83F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5316368D29F9A66800AFE83F /* PBXTargetDependency */,
+			);
+			name = RPGPTUITests;
+			productName = RPGPTUITests;
+			productReference = 5316368B29F9A66800AFE83F /* RPGPTUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5316366929F9A66600AFE83F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					5316367029F9A66600AFE83F = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					5316368029F9A66700AFE83F = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 5316367029F9A66600AFE83F;
+					};
+					5316368A29F9A66800AFE83F = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 5316367029F9A66600AFE83F;
+					};
+				};
+			};
+			buildConfigurationList = 5316366C29F9A66600AFE83F /* Build configuration list for PBXProject "RPGPT" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5316366829F9A66600AFE83F;
+			packageReferences = (
+				531636A229F9A87100AFE83F /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
+			productRefGroup = 5316367229F9A66600AFE83F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5316367029F9A66600AFE83F /* RPGPT */,
+				5316368029F9A66700AFE83F /* RPGPTTests */,
+				5316368A29F9A66800AFE83F /* RPGPTUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5316366F29F9A66600AFE83F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5316367C29F9A66700AFE83F /* Preview Assets.xcassets in Resources */,
+				5316367929F9A66700AFE83F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5316367F29F9A66700AFE83F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5316368929F9A66800AFE83F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5316366D29F9A66600AFE83F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				531636B129F9B44300AFE83F /* OpenAIError.swift in Sources */,
+				537B1D0F29FA98F700292D86 /* ChatMessage.swift in Sources */,
+				537B1D1129FA996D00292D86 /* ChatMessageType.swift in Sources */,
+				531636A129F9A70300AFE83F /* ChatView.swift in Sources */,
+				531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */,
+				531636A929F9A8D700AFE83F /* OpenAI.swift in Sources */,
+				5316367529F9A66600AFE83F /* RPGPTApp.swift in Sources */,
+				531636AB29F9AB0200AFE83F /* ChatViewModel.swift in Sources */,
+				531636A029F9A70300AFE83F /* BotResponse.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5316367D29F9A66700AFE83F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5316368629F9A66800AFE83F /* RPGPTTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5316368729F9A66800AFE83F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5316369229F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift in Sources */,
+				5316369029F9A66800AFE83F /* RPGPTUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5316368329F9A66800AFE83F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5316367029F9A66600AFE83F /* RPGPT */;
+			targetProxy = 5316368229F9A66800AFE83F /* PBXContainerItemProxy */;
+		};
+		5316368D29F9A66800AFE83F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5316367029F9A66600AFE83F /* RPGPT */;
+			targetProxy = 5316368C29F9A66800AFE83F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5316369329F9A66800AFE83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5316369429F9A66800AFE83F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5316369629F9A66800AFE83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RPGPT/Preview Content\"";
+				DEVELOPMENT_TEAM = 2N5Z737Y78;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5316369729F9A66800AFE83F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"RPGPT/Preview Content\"";
+				DEVELOPMENT_TEAM = 2N5Z737Y78;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPT;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5316369929F9A66800AFE83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N5Z737Y78;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPGPT.app/RPGPT";
+			};
+			name = Debug;
+		};
+		5316369A29F9A66800AFE83F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N5Z737Y78;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPTTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPGPT.app/RPGPT";
+			};
+			name = Release;
+		};
+		5316369C29F9A66800AFE83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N5Z737Y78;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RPGPT;
+			};
+			name = Debug;
+		};
+		5316369D29F9A66800AFE83F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2N5Z737Y78;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPTUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RPGPT;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5316366C29F9A66600AFE83F /* Build configuration list for PBXProject "RPGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5316369329F9A66800AFE83F /* Debug */,
+				5316369429F9A66800AFE83F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5316369529F9A66800AFE83F /* Build configuration list for PBXNativeTarget "RPGPT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5316369629F9A66800AFE83F /* Debug */,
+				5316369729F9A66800AFE83F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5316369829F9A66800AFE83F /* Build configuration list for PBXNativeTarget "RPGPTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5316369929F9A66800AFE83F /* Debug */,
+				5316369A29F9A66800AFE83F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5316369B29F9A66800AFE83F /* Build configuration list for PBXNativeTarget "RPGPTUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5316369C29F9A66800AFE83F /* Debug */,
+				5316369D29F9A66800AFE83F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		531636A229F9A87100AFE83F /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		531636A329F9A87100AFE83F /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 531636A229F9A87100AFE83F /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5316366929F9A66600AFE83F /* Project object */;
+}
