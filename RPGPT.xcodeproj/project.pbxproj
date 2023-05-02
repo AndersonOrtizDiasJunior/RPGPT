@@ -185,9 +185,7 @@
 		5334697729FC3D3F009EA97D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5334697829FC3D75009EA97D /* GettingAnswerView.swift */,
-				5334697E29FC45BB009EA97D /* ErrorMessageView.swift */,
-				538DC3842A00B2FF00374B12 /* MessageView.swift */,
+				53FACBDD2A0133890088C273 /* Message */,
 				538DC3862A00B4A300374B12 /* ChatHeaderView.swift */,
 				53FACBDB2A012D8D0088C273 /* ChatBottomView.swift */,
 			);
@@ -201,6 +199,16 @@
 				537B1D1729FAB23C00292D86 /* LocalStorage.swift */,
 			);
 			path = LocalStorage;
+			sourceTree = "<group>";
+		};
+		53FACBDD2A0133890088C273 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				5334697829FC3D75009EA97D /* GettingAnswerView.swift */,
+				5334697E29FC45BB009EA97D /* ErrorMessageView.swift */,
+				538DC3842A00B2FF00374B12 /* MessageView.swift */,
+			);
+			path = Message;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
