@@ -2,8 +2,8 @@ import Foundation
 final class LocalStorage {
 
 
-    func get(from key: LocalStorageKeys) -> String? {
-       UserDefaults.standard.string(forKey: key.rawValue)
+    func get<T>(from key: LocalStorageKeys, type: T.Type) -> T? {
+       UserDefaults.standard.object(forKey: key.rawValue) as? T
     }
 
     func get<T: Decodable>(from key: LocalStorageKeys, type: T.Type) -> T? {
@@ -18,7 +18,7 @@ final class LocalStorage {
         }
     }
 
-    func set(for key: LocalStorageKeys, value: String) {
+    func set(for key: LocalStorageKeys, value: Any) {
         UserDefaults.standard.set(value, forKey: key.rawValue)
     }
 

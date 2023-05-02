@@ -7,7 +7,12 @@ final class ChatViewModel: ObservableObject {
     private var localStorage: LocalStorage
     private var observer: AnyCancellable?
 
-    @Published var isGettingAnswer: Bool = false
+    @Published var shouldShowGettingAnswer: Bool = false
+    @Published var shouldShowError: Bool {
+        didSet {
+            localStorage.set(for: .shouldShowError, value: shouldShowError)
+        }
+    }
 
     @Published var messageList: [ChatViewMessage] {
         didSet {
@@ -19,6 +24,7 @@ final class ChatViewModel: ObservableObject {
         self.openAI = openAI
         self.localStorage = localStorage
         self.messageList = localStorage.get(from: .messageList, type: [ChatViewMessage].self) ?? AppConstants.initialMessageList
+        self.shouldShowError = localStorage.get(from: .shouldShowError, type: Bool.self) ?? false
         self.setup()
     }
 
@@ -30,22 +36,28 @@ final class ChatViewModel: ObservableObject {
     }
 
     func getGTPAnswer(_ message: String? = nil) {
-        isGettingAnswer = true
+        shouldShowGettingAnswer = true
+        shouldShowError = false
         observer = self.openAI.getGPTAnswer(message: message)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
                 case .failure(let error):
-                    self.messageList.append(.init(type: .error, content: AppConstants.openAIErrorMessage))
+                    self.shouldShowError = true
                     print("Error getting GPT Answer:")
                     print(error)
-                    self.isGettingAnswer = false
+                    self.shouldShowGettingAnswer = false
                 case .finished:
-                    self.isGettingAnswer = false
+                    self.shouldShowGettingAnswer = false
+
                     print("Succesfully got GPT Answer")
                 }
             } receiveValue: { response in
                 self.messageList.append(.init(type: .GPT, content: response))
             }
+    }
+
+    func shouldDisableSendButton() -> Bool {
+        self.shouldShowError || self.shouldShowGettingAnswer
     }
 }
