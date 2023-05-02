@@ -7,7 +7,7 @@ struct GettingAnswerView: View {
     var body: some View {
         HStack {
             Spacer()
-            Text("generating answer...")
+            Text(AppConstants.gettinAnswerMessage)
                 .italic()
                 .padding(10)
                 .background(Color.gray.opacity(0.15))

@@ -26,6 +26,9 @@
 		537B1D1329FAAC7100292D86 /* GPTError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1229FAAC7100292D86 /* GPTError.swift */; };
 		537B1D1629FAB1F000292D86 /* LocalStorageKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1529FAB1F000292D86 /* LocalStorageKeys.swift */; };
 		537B1D1829FAB23C00292D86 /* LocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537B1D1729FAB23C00292D86 /* LocalStorage.swift */; };
+		538DC3852A00B2FF00374B12 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DC3842A00B2FF00374B12 /* MessageView.swift */; };
+		538DC3872A00B4A300374B12 /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DC3862A00B4A300374B12 /* ChatHeaderView.swift */; };
+		53FACBDC2A012D8D0088C273 /* ChatBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FACBDB2A012D8D0088C273 /* ChatBottomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +70,9 @@
 		537B1D1229FAAC7100292D86 /* GPTError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPTError.swift; sourceTree = "<group>"; };
 		537B1D1529FAB1F000292D86 /* LocalStorageKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageKeys.swift; sourceTree = "<group>"; };
 		537B1D1729FAB23C00292D86 /* LocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorage.swift; sourceTree = "<group>"; };
+		538DC3842A00B2FF00374B12 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		538DC3862A00B4A300374B12 /* ChatHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
+		53FACBDB2A012D8D0088C273 /* ChatBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBottomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +187,9 @@
 			children = (
 				5334697829FC3D75009EA97D /* GettingAnswerView.swift */,
 				5334697E29FC45BB009EA97D /* ErrorMessageView.swift */,
+				538DC3842A00B2FF00374B12 /* MessageView.swift */,
+				538DC3862A00B4A300374B12 /* ChatHeaderView.swift */,
+				53FACBDB2A012D8D0088C273 /* ChatBottomView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -330,6 +339,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538DC3872A00B4A300374B12 /* ChatHeaderView.swift in Sources */,
 				537B1D0F29FA98F700292D86 /* ChatViewMessage.swift in Sources */,
 				537B1D1829FAB23C00292D86 /* LocalStorage.swift in Sources */,
 				5334697929FC3D75009EA97D /* GettingAnswerView.swift in Sources */,
@@ -338,11 +348,13 @@
 				531636A129F9A70300AFE83F /* ChatView.swift in Sources */,
 				531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */,
 				537B1D1629FAB1F000292D86 /* LocalStorageKeys.swift in Sources */,
+				538DC3852A00B2FF00374B12 /* MessageView.swift in Sources */,
 				5334697F29FC45BB009EA97D /* ErrorMessageView.swift in Sources */,
 				531636A929F9A8D700AFE83F /* OpenAI.swift in Sources */,
 				5316367529F9A66600AFE83F /* RPGPTApp.swift in Sources */,
 				537B1D1329FAAC7100292D86 /* GPTError.swift in Sources */,
 				531636AB29F9AB0200AFE83F /* ChatViewModel.swift in Sources */,
+				53FACBDC2A012D8D0088C273 /* ChatBottomView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

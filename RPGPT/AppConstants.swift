@@ -4,7 +4,9 @@ import OpenAISwift
 struct AppConstants {
     static let apiKey = ProcessInfo.processInfo.environment["API_KEY"] ?? ""
 
-    static let openAIErrorMessage = "Sorry, error getting answer. Please try Again"
+    static let gettinAnswerMessage = "generating answer..."
+    static let appName = "RPGPT"
+    static let textBoxMessage = "Type something"
 
     static let initialChat: [ChatMessage] = [
         ChatMessage(role: .system, content: "You are a tabletop RPG dungeon master."),
