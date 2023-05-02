@@ -4,11 +4,11 @@ import Combine
 
 final class OpenAI {
 
-    private var localStorage: LocalStorage
+    private var localStorage: LocalStorageProtocol
     private var client: OpenAISwift?
     private var chatHistory: [ChatMessage]
 
-    init(localStorage: LocalStorage = LocalStorage()) {
+    init(localStorage: LocalStorageProtocol = LocalStorage()) {
         self.localStorage = localStorage
         self.chatHistory = localStorage.get(from: .chatHistory, type: [ChatMessage].self) ?? AppConstants.initialChat
     }

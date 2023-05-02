@@ -4,7 +4,7 @@ import OpenAISwift
 
 final class ChatViewModel: ObservableObject {
     let openAI: OpenAI
-    private var localStorage: LocalStorage
+    private var localStorage: LocalStorageProtocol
     private var observer: AnyCancellable?
 
     @Published var shouldShowGettingAnswer: Bool = false
@@ -20,7 +20,7 @@ final class ChatViewModel: ObservableObject {
         }
     }
 
-    init (openAI: OpenAI = OpenAI(), localStorage: LocalStorage = LocalStorage()) {
+    init (openAI: OpenAI = OpenAI(), localStorage: LocalStorageProtocol = LocalStorage()) {
         self.openAI = openAI
         self.localStorage = localStorage
         self.messageList = localStorage.get(from: .messageList, type: [ChatViewMessage].self) ?? AppConstants.initialMessageList

@@ -1,5 +1,5 @@
 import Foundation
-final class LocalStorage {
+final class LocalStorage: LocalStorageProtocol {
 
 
     func get<T>(from key: LocalStorageKeys, type: T.Type) -> T? {

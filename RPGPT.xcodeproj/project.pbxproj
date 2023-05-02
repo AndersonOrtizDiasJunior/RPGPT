@@ -10,9 +10,6 @@
 		5316367529F9A66600AFE83F /* RPGPTApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316367429F9A66600AFE83F /* RPGPTApp.swift */; };
 		5316367929F9A66700AFE83F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5316367829F9A66700AFE83F /* Assets.xcassets */; };
 		5316367C29F9A66700AFE83F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5316367B29F9A66700AFE83F /* Preview Assets.xcassets */; };
-		5316368629F9A66800AFE83F /* RPGPTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316368529F9A66800AFE83F /* RPGPTTests.swift */; };
-		5316369029F9A66800AFE83F /* RPGPTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316368F29F9A66800AFE83F /* RPGPTUITests.swift */; };
-		5316369229F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316369129F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift */; };
 		531636A129F9A70300AFE83F /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5316369F29F9A70300AFE83F /* ChatView.swift */; };
 		531636A429F9A87100AFE83F /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 531636A329F9A87100AFE83F /* OpenAISwift */; };
 		531636A929F9A8D700AFE83F /* OpenAI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 531636A829F9A8D700AFE83F /* OpenAI.swift */; };
@@ -29,6 +26,7 @@
 		538DC3852A00B2FF00374B12 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DC3842A00B2FF00374B12 /* MessageView.swift */; };
 		538DC3872A00B4A300374B12 /* ChatHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 538DC3862A00B4A300374B12 /* ChatHeaderView.swift */; };
 		53FACBDC2A012D8D0088C273 /* ChatBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FACBDB2A012D8D0088C273 /* ChatBottomView.swift */; };
+		53FACBE42A01A48E0088C273 /* LocalStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FACBE32A01A48E0088C273 /* LocalStorageProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,10 +52,7 @@
 		5316367829F9A66700AFE83F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5316367B29F9A66700AFE83F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5316368129F9A66700AFE83F /* RPGPTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPGPTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5316368529F9A66800AFE83F /* RPGPTTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTTests.swift; sourceTree = "<group>"; };
 		5316368B29F9A66800AFE83F /* RPGPTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPGPTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5316368F29F9A66800AFE83F /* RPGPTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTUITests.swift; sourceTree = "<group>"; };
-		5316369129F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RPGPTUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5316369F29F9A70300AFE83F /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		531636A829F9A8D700AFE83F /* OpenAI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAI.swift; sourceTree = "<group>"; };
 		531636AA29F9AB0200AFE83F /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +68,7 @@
 		538DC3842A00B2FF00374B12 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		538DC3862A00B4A300374B12 /* ChatHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHeaderView.swift; sourceTree = "<group>"; };
 		53FACBDB2A012D8D0088C273 /* ChatBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBottomView.swift; sourceTree = "<group>"; };
+		53FACBE32A01A48E0088C273 /* LocalStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				5316367329F9A66600AFE83F /* RPGPT */,
-				5316368429F9A66800AFE83F /* RPGPTTests */,
-				5316368E29F9A66800AFE83F /* RPGPTUITests */,
 				5316367229F9A66600AFE83F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -142,23 +136,6 @@
 				5316367B29F9A66700AFE83F /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5316368429F9A66800AFE83F /* RPGPTTests */ = {
-			isa = PBXGroup;
-			children = (
-				5316368529F9A66800AFE83F /* RPGPTTests.swift */,
-			);
-			path = RPGPTTests;
-			sourceTree = "<group>";
-		};
-		5316368E29F9A66800AFE83F /* RPGPTUITests */ = {
-			isa = PBXGroup;
-			children = (
-				5316368F29F9A66800AFE83F /* RPGPTUITests.swift */,
-				5316369129F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift */,
-			);
-			path = RPGPTUITests;
 			sourceTree = "<group>";
 		};
 		531636A529F9A87600AFE83F /* OpenAI */ = {
@@ -197,6 +174,7 @@
 			children = (
 				537B1D1529FAB1F000292D86 /* LocalStorageKeys.swift */,
 				537B1D1729FAB23C00292D86 /* LocalStorage.swift */,
+				53FACBE32A01A48E0088C273 /* LocalStorageProtocol.swift */,
 			);
 			path = LocalStorage;
 			sourceTree = "<group>";
@@ -285,6 +263,7 @@
 					};
 					5316368029F9A66700AFE83F = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 1330;
 						TestTargetID = 5316367029F9A66600AFE83F;
 					};
 					5316368A29F9A66800AFE83F = {
@@ -354,6 +333,7 @@
 				5353388029FAEB0100132B71 /* View+Extensions.swift in Sources */,
 				537B1D1129FA996D00292D86 /* ChatViewMessageType.swift in Sources */,
 				531636A129F9A70300AFE83F /* ChatView.swift in Sources */,
+				53FACBE42A01A48E0088C273 /* LocalStorageProtocol.swift in Sources */,
 				531636AF29F9AEAE00AFE83F /* AppConstants.swift in Sources */,
 				537B1D1629FAB1F000292D86 /* LocalStorageKeys.swift in Sources */,
 				538DC3852A00B2FF00374B12 /* MessageView.swift in Sources */,
@@ -370,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5316368629F9A66800AFE83F /* RPGPTTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5316369229F9A66800AFE83F /* RPGPTUITestsLaunchTests.swift in Sources */,
-				5316369029F9A66800AFE83F /* RPGPTUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,15 +553,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2N5Z737Y78;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPTTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "RPGPTTests/RPGPTTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPGPT.app/RPGPT";
@@ -596,15 +581,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2N5Z737Y78;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Anderson.RPGPTTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "RPGPTTests/RPGPTTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RPGPT.app/RPGPT";
