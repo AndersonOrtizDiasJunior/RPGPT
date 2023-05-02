@@ -1,30 +1,45 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This project is a chat app where you can play tabletop RPG with ChatGPT.
+Objectives:
+  - Demonstrate applied understanding of MVVM archteture
+  - Display applied knowledg of the SwiftUI framework
+  - Exemplify applied knowledg of the Combine framework
+  - Illustrate skills to integrate third party libs using Swift Package Manager
+  - Show Clean Code and best industry pratices
+  - Prove deep understanding of Swift programming language
 
-{Provide a description of your app.  Describe how to use the app.}
-
-{Describe your purpose for creating this app.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=uNczYa18kVg&t=14s)
 
 # Development Environment
+XCode 13.3
+Swift
+Combine
+Swift UI
+OpenAI Swift
 
-{Describe the tools that you used to develop the app}
-
-{Describe the programming language that you used and any libraries.}
-
-# Useful Websites
-
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+# Third Party Libs
+* [OpenAI Swift](https://github.com/adamrushy/OpenAISwift)
 
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Add Unit Tests
+* Add UI Tests
+* Create Service to retrieve API Key
+
+#How to Run
+In order to make the app work, you need to create an enviroment variable with an Open AI API Key, you can do this following the following steps:
+
+Creating an OpenAI API Key(Skip this step with you already have an API key):
+1 - access https://openai.com/product
+2 - Click "Get Started"
+3 - Create an Open AI account or sign in
+4 - Click "Personal" > "View API Keys"
+5 - Select "Create New Secret key"
+6 - Copy the API Key and store it in a safe place
+
+Adding variable to XCode:
+1 - In XCode, select the RPGPT Scheme near the run button and then "Edit Scheme"
+2 - In "Arguments > Enviroment Variables' create a variable with the name "API_KEY" and the value of the API Key you created
+3 - Make sure it selected and build the application
